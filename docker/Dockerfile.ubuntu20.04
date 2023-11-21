@@ -34,7 +34,7 @@ COPY . .
 
 ARG PLUGIN_VERSION="N/A"
 RUN export CGO_LDFLAGS_ALLOW='-Wl,--unresolved-symbols=ignore-in-object-files' && \
-    go build -ldflags="-s -w -X 'main.Version=${PLUGIN_VERSION}'" -v -o build/nvidia-device-plugin
+    go build -ldflags="-s -w -X 'main.Version=${PLUGIN_VERSION}'" -v -o /build/nvidia-device-plugin
 
 
 ARG CUDA_IMAGE=cuda
